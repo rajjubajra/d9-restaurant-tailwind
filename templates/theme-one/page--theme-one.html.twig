@@ -38,7 +38,7 @@
 
   const getData = async () =>{
 
-    const url = `/d9-restaurant/jsonapi/node/home_page?include=field_home_block_2_image&include=field_home_block_3_col_1_image&include=field_home_block_3_col_2_image&include=field_home_block_3_col_3_image&include=field_home_block_4_image`;
+    const url = `/d9-restaurant/jsonapi/node/home_page?include=field_home_block_2_image,field_home_block_3_col_1_image,field_home_block_3_col_2_image,field_home_block_3_col_3_image,field_home_block_4_image`;
 
     const response_data = await fetch(url, {
       method: "GET",
