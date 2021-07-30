@@ -4,14 +4,10 @@
     {{ page.header }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
 
-  {{ page.breadcrumb }}
 
-  {{ page.highlighted }}
-
-  {{ page.help }}
+  <div id="main-nav"></div>
+  
 
   <main role="main">
     <h1 class="text-2xl">Theme One</h1>
@@ -48,6 +44,8 @@
     });
     const data = await response_data.json();
     console.log("MENU",data);
+
+    mainMenu(data);
     
   }
 
@@ -65,7 +63,12 @@
 
     console.log("JSON DATA", data);
 
+
   }
 
+  const mainMenu = async (data) => {
+    console.log("menu data",data);
+
+  }
 
 </script>
