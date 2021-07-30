@@ -30,10 +30,25 @@
 <script>
   window.onload = function() {
     try{
+      getMenu();
       getData();
+
     }catch(err){
       console.log("Error:", err);
     } 
+  }
+
+  const getMenu = async () =>{
+    const url = `/d9-restaurant/jsonapi/menu/menu`;
+    const response_data = await fetch(url,{
+      method: 'GET',
+      headers: {
+        Accept: 'application/vnd.api+json'
+      }
+    });
+    const data = await response_data.json();
+    console.log("MENU",data);
+    
   }
 
   const getData = async () =>{
