@@ -22,15 +22,21 @@ class MainMenu{
 }
 
 
+
+/** UI */
+
 const mainmenu = new MainMenu;
 
 mainmenu.getMainMenu()
 .then(data => {
+
   console.log("menu data", data);
-  const theme = 'theme-one'
+
+  
   let menuItem = '';
+
   data.data.map(item=>{
-     
+
       const {attributes:{title, url}} = item;
 
       /** Add 'theme-one' path withing the url */
@@ -46,9 +52,13 @@ mainmenu.getMainMenu()
       menuItem += `<li>
         <a class="p-1 m-1" href="${newurl}">${title}</a>
       </li>`;
-  })
+  });
 
-  document.getElementById('main-menu').innerHTML = `<ul class="flex">${menuItem}</ul>`;
+  document.getElementById('main-menu').innerHTML = `
+  <div class="flex bg-gray-900 text-gray-100">
+  <ul class="flex">${menuItem}</ul>
+  </div>
+  `;
 
 })
 
