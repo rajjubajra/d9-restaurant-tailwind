@@ -19,10 +19,8 @@ class MainMenu{
     return response.data;
   }
 
-
-
-
 }
+
 
 const mainmenu = new MainMenu;
 
@@ -30,10 +28,15 @@ mainmenu.getMainMenu()
 .then(data => {
   console.log("menu data", data);
   const theme = 'theme-one'
+  let menuItem;
   data.map(item=>{
       const {attributes:{title, url}} = item;
-      document.getElementById('main-menu').innerHTML += `<li><a href="${theme}/${url}">${title}</a></li>`;
+      menuItem += `<li>
+        <a href="${theme}/${url}">${title}</a>
+      </li>`;
   })
-  
+
+  document.getElementById('main-menu').innerHTML = `<ul class="flex">${menuItem}</ul>`;
+
 })
 
