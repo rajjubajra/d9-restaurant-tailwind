@@ -34,10 +34,10 @@ mainmenu.getMainMenu()
       const re = /[/]/g;
       let arr = url.split(re);
       arr.splice(2,0,"theme-one");
-      arr.toString().replace(/[,]/g,'/');
-      console.log("arr",arr);
+      let newurl = arr.toString().replace(/[,]/g,'/');
+      console.log("arr",arr, "newurl", newurl);
       menuItem += `<li>
-        <a class="p-1 m-1" href="${arr}">${title}</a>
+        <a class="p-1 m-1" href="${newurl}">${title}</a>
       </li>`;
   })
 
