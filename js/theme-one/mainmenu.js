@@ -16,7 +16,7 @@ class MainMenu{
       }
     })
     const response = await response_data.json();
-    return response.data;
+    return response;
   }
 
 }
@@ -29,11 +29,8 @@ mainmenu.getMainMenu()
   console.log("menu data", data);
   const theme = 'theme-one'
   let menuItem = '';
-  let reg = /\s*(?:;|$)\s*/;
-  data.map(item=>{
+  data.data.map(item=>{
       const {attributes:{title, url}} = item;
-      let regex = url.split(reg); 
-      console.log("Array url: ",regex);
       menuItem += `<li>
         <a class="p-1 m-1" href="${url}">${title}</a>
       </li>`;
