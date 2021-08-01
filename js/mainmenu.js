@@ -1,4 +1,4 @@
-class GetData{
+class MainMenu{
 
   constructor(){
     this.main_menu_url = `/d9-restaurant/jsonapi/menu_items/main`;
@@ -20,9 +20,9 @@ class GetData{
 
 }
 
-const getdata = new GetData;
+const mainmenu = new MainMenu;
 
-getdata.getMainMenu()
+mainmenu.getMainMenu()
 .then(data =>{
   console.log("menu data", data);
 })
