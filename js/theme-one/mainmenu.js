@@ -32,7 +32,7 @@ mainmenu.getMainMenu()
   const theme = 'theme-one'
   data.map(item=>{
       const {attributes:{title, url}} = item;
-      document.getElementById('main-menu').innerHTML += `<li><a href="/${theme}/${url}">${title}</a></li>`;
+      document.getElementById('main-menu').innerHTML += `<li><a href="${theme}/${url}">${title}</a></li>`;
   })
   
 })
