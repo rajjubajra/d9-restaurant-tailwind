@@ -29,9 +29,10 @@ mainmenu.getMainMenu()
   console.log("menu data", data);
   const theme = 'theme-one'
   let menuItem = '';
+  let reg = ////
   data.map(item=>{
       const {attributes:{title, url}} = item;
-      let regex = url.replace(/\\/g,','); 
+      let regex = url.replace(reg,","); 
       console.log("Array url: ",regex);
       menuItem += `<li>
         <a class="p-1 m-1" href="${url}">${title}</a>
