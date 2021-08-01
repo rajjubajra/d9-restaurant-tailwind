@@ -29,9 +29,10 @@ mainmenu.getMainMenu()
   console.log("menu data", data);
   const theme = 'theme-one'
   let menuItem = '';
+  let re = /(\w+)\s(\w+)/;
   data.map(item=>{
       const {attributes:{title, url}} = item;
-      let regex = regexprep(url, '/',','); 
+      let regex = url.replace(re,','); 
       let arr = regex.split(",");
       console.log("Array url: ",regex, arr);
       menuItem += `<li>
