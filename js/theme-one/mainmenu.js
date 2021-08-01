@@ -27,11 +27,12 @@ class MainMenu{
 const mainmenu = new MainMenu;
 
 mainmenu.getMainMenu()
-.then(data =>{
+.then(data => {
   console.log("menu data", data);
+  const theme = 'theme-one'
   data.map(item=>{
       const {attributes:{title, url}} = item;
-      document.getElementById('main-menu').innerHTML += `<li><a href="${url}">${title}</a></li>`;
+      document.getElementById('main-menu').innerHTML += `<li><a href="/${theme}/${url}">${title}</a></li>`;
   })
   
 })
