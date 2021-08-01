@@ -4,5 +4,5 @@ global-styling:
       dist/tailwind.css: {}
   
   js:
-    js/mainmenu.js: {}
-    js/homepage.js: {}
+    js/theme-one/mainmenu.js: {}
+    js/theme-one/homepage.js: {}
