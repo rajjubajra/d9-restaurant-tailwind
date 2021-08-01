@@ -31,8 +31,8 @@ mainmenu.getMainMenu()
   console.log("menu data", data);
   data.map(item=>{
       const {attributes:{title, url}} = item;
-      let menudata = `<li><a href="${url}">${title}</a></li>`;
+      document.getElementById('main-menu').innerHTML += `<li><a href="${url}">${title}</a></li>`;
   })
-  document.getElementById('main-menu').innerHTML += menudata;
+  
 })
 
