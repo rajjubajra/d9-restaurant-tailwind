@@ -5,6 +5,7 @@ class MainMenu{
 
   }
 
+
   async getMainMenu(){
     const response_data = await fetch(`${this.main_menu_url}`,{
       method: 'GET',
@@ -26,3 +27,5 @@ mainmenu.getMainMenu()
 .then(data =>{
   console.log("menu data", data);
 })
+
+document.getElementById('main-menu').innerHTML = 'This is main menu block';
