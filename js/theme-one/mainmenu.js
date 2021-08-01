@@ -34,6 +34,7 @@ mainmenu.getMainMenu()
       const re = /[/]/g;
       let arr = url.split(re).splice(2,0,"theme-one");
       let newUrl = arr.toString().replace(/[,]/g,'/');
+      console.log("arr",arr,"newUrl", newUrl);
       menuItem += `<li>
         <a class="p-1 m-1" href="${newUrl}">${title}</a>
       </li>`;
