@@ -16,7 +16,7 @@ class MainMenu{
       }
     })
     const response = await response_data.json();
-    return response;
+    return response.data;
   }
 
 
