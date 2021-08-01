@@ -32,7 +32,7 @@ mainmenu.getMainMenu()
   data.map(item=>{
       const {attributes:{title, url}} = item;
       menuItem += `<li>
-        <a class="p-1 m-1" href="${theme}/${url}">${title}</a>
+        <a class="p-1 m-1" href="${url}">${title}</a>
       </li>`;
   })
 
