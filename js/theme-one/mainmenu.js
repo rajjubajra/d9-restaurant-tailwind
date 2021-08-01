@@ -32,10 +32,10 @@ mainmenu.getMainMenu()
   data.data.map(item=>{
       const {attributes:{title, url}} = item;
       const re = /[/]/g;
-      let arr = url.split(re);
-      console.log("Arr",arr);
+      let arr = url.split(re).splice(2,0,"theme-one");
+      let newUrl = arr.toString().replace(/[,]/g,'/');
       menuItem += `<li>
-        <a class="p-1 m-1" href="${url}">${title}</a>
+        <a class="p-1 m-1" href="${newUrl}">${title}</a>
       </li>`;
   })
 
