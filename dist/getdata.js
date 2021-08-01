@@ -19,3 +19,10 @@ class GetData{
   }
 
 }
+
+const getdata = new GetData;
+
+getdata.getMainMenu()
+.then(data =>{
+  console.log("menu data", data);
+})
