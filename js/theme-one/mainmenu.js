@@ -31,9 +31,10 @@ mainmenu.getMainMenu()
   let menuItem = '';
   data.data.map(item=>{
       const {attributes:{title, url}} = item;
-      let string = JSON.stringify(url);
-      let arr = string.split('/');
-      console.log(arr, string);
+      const re = /[/]/g;
+      let arr = url.split(re);
+      console.log("Arr",arr);
+      
       menuItem += `<li>
         <a class="p-1 m-1" href="${url}">${title}</a>
       </li>`;
