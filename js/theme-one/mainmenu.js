@@ -29,6 +29,10 @@ const mainmenu = new MainMenu;
 mainmenu.getMainMenu()
 .then(data =>{
   console.log("menu data", data);
-  document.getElementById('main-menu').innerHTML = 'This is main menu';
+  data.map(item=>{
+      const {attributes:{title, url}} = item;
+      let menudata = `<li><a href="${url}">${title}</a></li>`;
+  })
+  document.getElementById('main-menu').innerHTML += menudata;
 })
 
