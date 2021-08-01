@@ -30,12 +30,19 @@ mainmenu.getMainMenu()
   const theme = 'theme-one'
   let menuItem = '';
   data.data.map(item=>{
+     
       const {attributes:{title, url}} = item;
+
+      /** Add 'theme-one' path withing the url */
+      //regex '/', for url to array
       const re = /[/]/g;
       let arr = url.split(re);
+      //add "theme-one" one array value 2
       arr.splice(2,0,"theme-one");
+      // array to string back to url with theme-one path added
       let newurl = arr.toString().replace(/[,]/g,'/');
-      console.log("arr",arr, "newurl", newurl);
+      //console.log("arr",arr, "newurl", newurl);
+
       menuItem += `<li>
         <a class="p-1 m-1" href="${newurl}">${title}</a>
       </li>`;
