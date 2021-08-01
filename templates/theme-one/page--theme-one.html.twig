@@ -68,7 +68,14 @@
 
   const mainMenu = async (data) => {
     console.log("menu data",data);
-
+    
+      data.length > 0 &&
+      data.map((item,index) => {
+        return <div key={index}>
+        <DishTitle title={item.name} brief={item.description__value} />
+        <DishList dishList={item.menu} />
+        </div>
+      })
   }
 
 </script>
