@@ -19,6 +19,9 @@ class MainMenu{
     return response;
   }
 
+
+
+
 }
 
 const mainmenu = new MainMenu;
@@ -26,6 +29,6 @@ const mainmenu = new MainMenu;
 mainmenu.getMainMenu()
 .then(data =>{
   console.log("menu data", data);
+  document.getElementById('main-menu').innerHTML = 'This is main menu';
 })
 
-document.getElementById('main-menu').innerHTML = 'This is main menu block';
