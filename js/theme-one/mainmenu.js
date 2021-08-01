@@ -32,7 +32,7 @@ mainmenu.getMainMenu()
   let reg = /(\w+)\s(\w+)/;
   data.map(item=>{
       const {attributes:{title, url}} = item;
-      let regex = url.split(reg); 
+      let regex = url.split("//"); 
       console.log("Array url: ",regex);
       menuItem += `<li>
         <a class="p-1 m-1" href="${url}">${title}</a>
