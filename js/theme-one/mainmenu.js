@@ -32,7 +32,7 @@ mainmenu.getMainMenu()
   data.data.map(item=>{
       const {attributes:{title, url}} = item;
       let string = JSON.stringify(url);
-      let arr = sring.split('/');
+      let arr = string.split('/');
       console.log(arr, string);
       menuItem += `<li>
         <a class="p-1 m-1" href="${url}">${title}</a>
