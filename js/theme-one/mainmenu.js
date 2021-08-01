@@ -28,7 +28,7 @@ mainmenu.getMainMenu()
 .then(data => {
   console.log("menu data", data);
   const theme = 'theme-one'
-  let menuItem;
+  let menuItem = '';
   data.map(item=>{
       const {attributes:{title, url}} = item;
       menuItem += `<li>
