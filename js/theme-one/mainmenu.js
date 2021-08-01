@@ -37,7 +37,7 @@ mainmenu.getMainMenu()
       arr.toString().replace(/[,]/g,'/');
       console.log("arr",arr);
       menuItem += `<li>
-        <a class="p-1 m-1" href="${newUrl}">${title}</a>
+        <a class="p-1 m-1" href="${arr}">${title}</a>
       </li>`;
   })
 
