@@ -9,7 +9,9 @@ class AboutPage{
     const response_data = await fetch(this.url,{
       method: 'GET',
       headers:{
-        Accept:'Application/vnd.api+json'
+        Accept: {
+          Accept: 'application/vnd.api+json'
+        }
       }
     })
 
@@ -22,6 +24,6 @@ class AboutPage{
 /** UI */
 const aboutpage = new AboutPage;
 aboutpage.getAboutPage()
-.then(data => {
-  console.log(data);
+.then( data => {
+  console.log("ABOUT PAGE DATA",data);
 })
