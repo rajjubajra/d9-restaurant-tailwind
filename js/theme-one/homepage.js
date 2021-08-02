@@ -29,5 +29,7 @@ homepage.getHomePage()
 .then(data =>{
   console.log("homepage data", data);
   console.log(data[0]);
+  /** main title */
   document.getElementById('main-title').innerHTML = `${data[0].attributes.field_home_block_1_text.value}`
+  
 })

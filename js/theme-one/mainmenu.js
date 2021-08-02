@@ -52,6 +52,7 @@ mainmenu.getMainMenu()
       menuItem += `<div>
         <a class="px-3 py-2" href="${newurl}">${title}</a>
       </div>`;
+
   });
 
   document.getElementById('main-menu').innerHTML = `${menuItem}`;

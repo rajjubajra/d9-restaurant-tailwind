@@ -1,10 +1,17 @@
 {% include '@tailwindcss/theme-one/mainmenu.html.twig' %}
 
-<div class="container mx-auto p-4">
+<div class="relative">
+  <div class="relativ">
+    <div class="h-screen">
+      <img src="" alt="" title="bg" />
+    </div>
+    <div class="w-full h-screen flex justify-center items-center absolute top-0 text-center">
+      {# MAIN TITLE #}
+      <div class="text-8xl text-gray-200 leading-normal" id="main-title"></div>
+    </div>
+  </div>
 
-  <main role="main">
-    <h1 class="text-2xl" id="main-title"></h1> 
-  </main>
+  {# FOOTER #}
 
   {% if page.footer %}
     <footer role="contentinfo">
