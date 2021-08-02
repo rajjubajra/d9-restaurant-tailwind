@@ -49,16 +49,12 @@ mainmenu.getMainMenu()
       let newurl = arr.toString().replace(/[,]/g,'/');
       //console.log("arr",arr, "newurl", newurl);
 
-      menuItem += `<div class="grid gap-2 md:flex font-thin text-sm">
+      menuItem += `<div>
         <a class="px-3 py-2" href="${newurl}">${title}</a>
-      </li>`;
+      </div>`;
   });
 
-  document.getElementById('main-menu').innerHTML = `
-  <div class="flex bg-gray-900 text-gray-100">
-  <ul class="flex">${menuItem}</ul>
-  </div>
-  `;
+  document.getElementById('main-menu').innerHTML = `${menuItem}`;
 
 })
 
