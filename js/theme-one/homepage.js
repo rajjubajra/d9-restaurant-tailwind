@@ -3,7 +3,10 @@ class HomePage{
   
   constructor(){
 
-    this.homepage_url = `/d9-restaurant/jsonapi/node/home_page?include=field_home_block_2_image,field_home_block_3_col_1_image,field_home_block_3_col_2_image,field_home_block_3_col_3_image,field_home_block_4_image&fields[node--home_page]=title,field_home_block_1_text,field_home_block_2_text, field_home_block_3_col_1_text,field_home_block_3_col_2_text,field_home_block_3_col_3_text&fields[file--file]=uri,filesize`;
+    this.homepage_url = `/d9-restaurant/jsonapi/node/home_page?include=field_home_block_2_image,field_home_block_3_col_1_image,field_home_block_3_col_2_image,field_home_block_3_col_3_image,field_home_block_4_image&fields[node--home_page]=title,field_home_block_1_text,field_home_block_2_text, field_home_block_3_col_1_text,
+    field_home_block_3_col_2_text,
+    field_home_block_3_col_3_text&
+    fields[file--file]=uri,filesize`;
 
   }
 
@@ -17,7 +20,7 @@ class HomePage{
       }
     })
     const response = await response_data.json();
-    return response.data;
+    return response;
   }
 
 }
@@ -28,10 +31,10 @@ const homepage = new HomePage;
 homepage.getHomePage()
 .then(data =>{
   console.log("homepage data", data);
-  console.log(data[0]);
+  console.log(data.data[0]);
   /** main title */
-  document.getElementById('main-title').innerHTML = `${data[0].attributes.field_home_block_1_text.value}`;
+  document.getElementById('main-title').innerHTML = `${data.data[0].attributes.field_home_block_1_text.value}`;
 
-  document.getElementById('block-two').innerHTML = `${data[0].attributes.field_home_block_2_text.value}`
+  document.getElementById('block-two').innerHTML = `${data.data[0].attributes.field_home_block_2_text.value}`
   
 })
