@@ -934,4 +934,9 @@ video {
   .lg\:w-80 {
     width: 20rem;
   }
+
+  .lg\:px-60 {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
 }
