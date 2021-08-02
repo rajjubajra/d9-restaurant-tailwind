@@ -29,7 +29,7 @@ const homepage = new HomePage;
 homepage.getHomePage()
 .then(data =>{
   console.log("homepage data", data);
-  console.log(data.data[0].attributes.feild_home_block_3_col_1_text);
+  console.log(data.data[0].attributes.field_home_block_3_col_1_text);
   /** main title */
   document.getElementById('main-title').innerHTML = `${data.data[0].attributes.field_home_block_1_text.value}`;
   /** BLOCK TWO */
