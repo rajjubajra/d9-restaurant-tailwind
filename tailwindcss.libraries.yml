@@ -6,6 +6,6 @@ global-styling:
   js:
     js/theme-one/mainmenu.js: {}
 
-homepage-library:
+homepage-script:
   js:
     js/theme-one/homepage.js: {}
