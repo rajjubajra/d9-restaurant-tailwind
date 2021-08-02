@@ -39,24 +39,24 @@ homepage.getHomePage()
 
   /** BLOCK TWO */
   document.getElementById('block-two').innerHTML = `${data.data[0].attributes.field_home_block_2_text.value}`
-  document.getElementById('bg-home-main').innerHTML = `
+  document.getElementById('block-two-image').innerHTML = `
   <img src="${data.included[1].attributes.uri.url}" alt="bg-main" />`
 
   /** BLOCK 3 COL 1 */
   document.getElementById('block-3-col-1').innerHTML = `${data.data[0].attributes.field_home_block_3_col_1_text.value}`
-  document.getElementById('bg-home-main').innerHTML = `
+  document.getElementById('block-3-col-1-image').innerHTML = `
   <img src="${data.included[2].attributes.uri.url}" alt="bg-main" />`
   /** BLOCK 3 COL 2 */
   document.getElementById('block-3-col-2').innerHTML = `${data.data[0].attributes.field_home_block_3_col_2_text.value}`
-  document.getElementById('bg-home-main').innerHTML = `
+  document.getElementById('block-3-col-2-image').innerHTML = `
   <img src="${data.included[3].attributes.uri.url}" alt="bg-main" />`
   /** BLOCK 3 COL 3 */
   document.getElementById('block-3-col-3').innerHTML = `${data.data[0].attributes.field_home_block_3_col_3_text.value}`
-  document.getElementById('bg-home-main').innerHTML = `
+  document.getElementById('block-3-col-3-image').innerHTML = `
   <img src="${data.included[4].attributes.uri.url}" alt="bg-main" />`
 
   /** BLOCK 4  */
-  document.getElementById('bg-home-main').innerHTML = `
+  document.getElementById('block-four-image').innerHTML = `
   <img src="${data.included[5].attributes.uri.url}" alt="bg-main" />`
   
 })
