@@ -12,4 +12,4 @@ homepage-script:
     
 aboutpage-script:
   js:
-    js/theme-one/aboutpage.js:{}
+    js/theme-one/aboutpage.js: {}
