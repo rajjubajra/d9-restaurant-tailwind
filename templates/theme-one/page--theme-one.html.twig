@@ -1,6 +1,9 @@
 {% include '@tailwindcss/theme-one/mainmenu.html.twig' %}
 
 <div class="relative">
+
+
+  {# -- BLOCK ONE - LANDING PAGE ------------------------------#}
   <div class="relativ">
     {# main page background image #}
     <div class="h-screen" id="bg-home-main"></div>
@@ -9,14 +12,21 @@
       <div class="text-8xl text-gray-200 leading-normal" id="main-title"></div>
     </div>
   </div>
+
+
+
+  {# -- BLOCK TWO ------------------------------#}
   <div>
     <div class="w-full min-h-48 flex justify-center items-center flex-col py-20 md:px-20">
       {# BLOCK TWO CONTENT#}
         <div class="md:w-1/2 w-2/3" id="block-two"></div>
     </div>
-    <div id="block-two-image"></div>
+    <div id="block-two-image" class="w-full h-96 object-cover"></div>
   </div>
 
+
+
+  {# -- BLOCK THREE ------------------------------#}  
   {# BLOCK THREE COL 1 COL 2 AND COL 3 #}
   <div class="container m-auto my-20 flex flex-wrap justify-center">
     <div class="lg:w-80 px-4">
@@ -38,11 +48,17 @@
       </div>  
     </div>
   </div>
+
+
+
+  {# -- BLOCK FOUR ------------------------------#}
   {# BLOCK FOUR #}
   <div class="container m-auto my-20" id="block-four-image"></div>
 
-  {# FOOTER #}
 
+
+  {# -- FOOTER ------------------------------#}
+  {# FOOTER #}
   {% if page.footer %}
     <footer class="container bg-gray-100 border" role="contentinfo">
       {{ page.footer }}
