@@ -49,8 +49,8 @@ mainmenu.getMainMenu()
       let newurl = arr.toString().replace(/[,]/g,'/');
       //console.log("arr",arr, "newurl", newurl);
 
-      menuItem += `<li>
-        <a class="p-1 m-1" href="${newurl}">${title}</a>
+      menuItem += `<div class="grid gap-2 md:flex font-thin text-sm">
+        <a class="px-3 py-2" href="${newurl}">${title}</a>
       </li>`;
   });
 
