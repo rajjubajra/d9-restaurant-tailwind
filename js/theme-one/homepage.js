@@ -22,9 +22,11 @@ class HomePage{
 
 }
 
+/** UI */
 const homepage = new HomePage;
 
 homepage.getHomePage()
 .then(data =>{
   console.log("homepage data", data);
+  document.getElementById('main-title').innerHTML = `${data[0].attributes.field_home_block_1_text.value}`
 })
