@@ -30,17 +30,18 @@ homepage.getHomePage()
 .then(data =>{
   console.log("homepage data", data);
   console.log(data.data[0].attributes.field_home_block_3_col_1_text);
-  /** main title */
+
+  /** BLOCK ONE -  main title */
   document.getElementById('main-title').innerHTML = `${data.data[0].attributes.field_home_block_1_text.value}`;
   /** background image main */
   document.getElementById('bg-home-main').innerHTML = `
-  <img src="${data.included[0].attributes.uri.url}" alt="bg-main" />`
+  <img src="${data.included[0].attributes.uri.url}" alt="bg-main" />`;
 
 
   /** BLOCK TWO */
-  document.getElementById('block-two').innerHTML = `${data.data[0].attributes.field_home_block_2_text.value}`
+  document.getElementById('block-two').innerHTML = `${data.data[0].attributes.field_home_block_2_text.value}`;
   document.getElementById('block-two-image').innerHTML = `
-  <img src="${data.included[1].attributes.uri.url}" alt="bg-main" />`
+  <img src="${data.included[1].attributes.uri.url}" alt="bg-main" />`;
 
   /** BLOCK 3 COL 1 */
   document.getElementById('block-3-col-1').innerHTML = `${data.data[0].attributes.field_home_block_3_col_1_text.value}`
