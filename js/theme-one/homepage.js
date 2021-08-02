@@ -31,7 +31,7 @@ homepage.getHomePage()
   console.log("homepage data", data);
   console.log(data.data[0].attributes.field_home_block_2_text.value);
 
-  let text_content = await data.data[0];
+  let text_content = data.data[0];
 
   /** BLOCK ONE -  main title */
   document.getElementById('main-title').innerHTML = `${text_content.attributes.field_home_block_1_text.value}`;
