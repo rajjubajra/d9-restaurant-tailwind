@@ -30,6 +30,8 @@ homepage.getHomePage()
   console.log("homepage data", data);
   console.log(data[0]);
   /** main title */
-  document.getElementById('main-title').innerHTML = `${data[0].attributes.field_home_block_1_text.value}`
+  document.getElementById('main-title').innerHTML = `${data[0].attributes.field_home_block_1_text.value}`;
+
+  document.getElementById('block-two').innerHTML = `${data[0].attributes.field_home_block_2_text.value}`
   
 })
