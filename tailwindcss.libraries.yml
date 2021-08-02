@@ -9,3 +9,7 @@ global-styling:
 homepage-script:
   js:
     js/theme-one/homepage.js: {}
+    
+aboutpage-script:
+  js:
+    js/theme-one/aboutpage.js:{}
