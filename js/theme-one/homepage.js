@@ -33,9 +33,9 @@ homepage.getHomePage()
 
   /** BLOCK ONE -  main title */
   document.getElementById('main-title').innerHTML = `${data.data[0].attributes.field_home_block_1_text.value}`;
-  /** background image main */
-  document.getElementById('bg-home-main').innerHTML = `
-  <img src="${data.included[0].attributes.uri.url}" alt="bg-main" />`;
+  /** background image main 
+  document.getElementById('bg-home-main').innerHTML = `<img src="${data.included[0].attributes.uri.url}" alt="bg-main" />`;
+  */
 
 
   /** BLOCK TWO */
