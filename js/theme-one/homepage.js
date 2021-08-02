@@ -29,13 +29,12 @@ const homepage = new HomePage;
 homepage.getHomePage()
 .then(data =>{
   console.log("homepage data", data);
-  console.log(data.data[0].attributes.field_home_block_3_col_1_text);
+  console.log(data.data[0].attributes.field_home_block_2_text.value);
 
   /** BLOCK ONE -  main title */
   document.getElementById('main-title').innerHTML = `${data.data[0].attributes.field_home_block_1_text.value}`;
-  /** background image main 
+  /** background image main */
   document.getElementById('bg-home-main').innerHTML = `<img src="${data.included[0].attributes.uri.url}" alt="bg-main" />`;
-  */
 
 
   /** BLOCK TWO */
