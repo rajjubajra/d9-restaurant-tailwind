@@ -17,3 +17,7 @@ aboutpage-script:
 menupage-script:
   js:
     js/theme-one/menupage.js: {}
+
+tablebooking-script:
+  js:
+    js/theme-one/tablebooking.js: {}
