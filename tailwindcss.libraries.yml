@@ -13,3 +13,7 @@ homepage-script:
 aboutpage-script:
   js:
     js/theme-one/aboutpage.js: {}
+
+menupage-script:
+  js:
+    js/theme-one/menupage.js: {}
