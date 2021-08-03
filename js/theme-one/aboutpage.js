@@ -1,6 +1,6 @@
 class AboutPage{
   constructor(){
-    this.url = `/d9-restaurant/jsonapi/node/about_page`;
+    this.url = `/d9-restaurant/jsonapi/node/about_page?include=field_about_page_image`;
 
   }
 
