@@ -32,7 +32,6 @@ aboutpage.getAboutPage()
   /** new array with included json data */
   let newData = [];
 
-
   data.data.map(item=>{
     const {attributes:{title,field_about_page_text:{value}}} = item;
     data.included.map(inc =>{
@@ -45,6 +44,24 @@ aboutpage.getAboutPage()
 /** To DOM */
 console.log("new data",newData);
 
+const page = '';
+
+newData.map(item => {  
+  return page += `
+  <div class="px-20 w-full"><h1 class="text-5xl">${item.title}</h1></div>
+  <div class="flex flex-col md:flex-row">
+    <div class="md:p-20 p-5 order-2 md:order-1">${item.body}</div>
+    <div class="order-1 md:order-2 my-10 md:my-0">
+      <img 
+      class="object-cover h-32 w-10/12 m-auto lg:h-auto lg:w-full md:h-full"
+      src="${item.image}"
+      alt=""
+      />
+    </div>
+  </div>`;
+})
+
+document.getElementById('about-page').innerHTML = page;
 
 })
 
