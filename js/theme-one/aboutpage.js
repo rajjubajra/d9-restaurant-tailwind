@@ -44,25 +44,24 @@ aboutpage.getAboutPage()
 /** To DOM */
 console.log("new data",newData);
 
-
-
 newData.map(item => {  
+  
   const page = '';
-  return page += `
+  page += `
   <div class="px-20 w-full"><h1 class="text-5xl">${item.title}</h1></div>
   <div class="flex flex-col md:flex-row">
     <div class="md:p-20 p-5 order-2 md:order-1">${item.body}</div>
     <div class="order-1 md:order-2 my-10 md:my-0">
-      <img 
+      <img
       class="object-cover h-32 w-10/12 m-auto lg:h-auto lg:w-full md:h-full"
       src="${item.image}"
       alt=""
       />
     </div>
   </div>`;
-})
+  })
 
-document.getElementById('about-page').innerHTML = page + 'TESt text';
+return document.getElementById('about-page').innerHTML = page + 'This is About Page'
 
 })
 
