@@ -25,5 +25,18 @@ class AboutPage{
 const aboutpage = new AboutPage;
 aboutpage.getAboutPage()
 .then( data => {
+
+  let newData = [];
+  data.data.map(item=>{
+    const {attributes:{title,field_about_page_text:{value}}} = item;
+    data.included.map(inc =>{
+      const {attributes:{uri:{url}}} = inc
+      newData.push({title: title, body: value, image: url})
+    })  
+  })
+
   console.log("ABOUT PAGE DATA",data);
+  console.log("new data",newData);
+  //document.getElementById("about-page").innerHTML = ``;
+
 })
