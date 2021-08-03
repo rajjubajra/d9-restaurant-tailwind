@@ -16,5 +16,7 @@ const bookingForm = document.getElementById("booking-form");
 
 bookingForm.addEventListener('submit', function(e){
   e.preventDefault();
-  console.log(e);
+
+  const formData = new FormData(this);
+  console.log("FORM DATA",formData);
 })
