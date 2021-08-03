@@ -23,9 +23,8 @@ bookingForm.addEventListener('submit', function(e){
     method: 'POST',
     body: formData
   }).then(res => {
-    const dt = ''
-    dt = res.json();
-    console.log("DATA FORM DATA",dt);
+    
+    console.log("DATA FORM DATA",res);
   })
 
 })
