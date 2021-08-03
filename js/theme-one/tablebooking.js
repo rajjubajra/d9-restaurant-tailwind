@@ -18,5 +18,14 @@ bookingForm.addEventListener('submit', function(e){
   e.preventDefault();
 
   const formData = new FormData(this);
-  console.log("FORM DATA",formData);
+  
+  fetch(`/d9-restaurant/jsonapi/webform_submission/table_booking`,{
+    method: 'POST',
+    body: formData
+  }).then(res => {
+    const dt = ''
+    dt = res.json();
+    console.log("DATA FORM DATA",dt);
+  })
+
 })
