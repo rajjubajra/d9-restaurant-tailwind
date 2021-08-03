@@ -23,10 +23,13 @@ class AboutPage{
 
 /** UI */
 const aboutpage = new AboutPage;
+
+/** new array with included json data */
+let newData = [];
+
 aboutpage.getAboutPage()
 .then( data => {
 
-  let newData = [];
   data.data.map(item=>{
     const {attributes:{title,field_about_page_text:{value}}} = item;
     data.included.map(inc =>{
@@ -35,8 +38,9 @@ aboutpage.getAboutPage()
     })  
   })
 
-  console.log("ABOUT PAGE DATA",data);
-  console.log("new data",newData);
-  //document.getElementById("about-page").innerHTML = ``;
+//  console.log("ABOUT PAGE DATA",data);
 
 })
+
+/** To DOM */
+console.log("new data",newData);
