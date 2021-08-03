@@ -42,26 +42,27 @@ aboutpage.getAboutPage()
 
 //  console.log("ABOUT PAGE DATA",data);
 /** To DOM */
-console.log("new data",newData);
+console.log("new data", newData);
 
 newData.map(item => {  
   
-  const page = '';
-  page += `
-  <div class="px-20 w-full"><h1 class="text-5xl">${item.title}</h1></div>
-  <div class="flex flex-col md:flex-row">
-    <div class="md:p-20 p-5 order-2 md:order-1">${item.body}</div>
-    <div class="order-1 md:order-2 my-10 md:my-0">
-      <img
-      class="object-cover h-32 w-10/12 m-auto lg:h-auto lg:w-full md:h-full"
-      src="${item.image}"
-      alt=""
-      />
-    </div>
-  </div>`;
-  })
+  const page = `
+        <div class="px-20 w-full"><h1 class="text-5xl">${item.title}</h1></div>
+        <div class="flex flex-col md:flex-row">
+          <div class="md:p-20 p-5 order-2 md:order-1">${item.body}</div>
+          <div class="order-1 md:order-2 my-10 md:my-0">
+            <img
+            class="object-cover h-32 w-10/12 m-auto lg:h-auto lg:w-full md:h-full"
+            src="${item.image}"
+            alt=""
+            />
+          </div>
+        </div>`;
 
-return document.getElementById('about-page').innerHTML = page + 'This is About Page'
+  return document.getElementById('about-page').innerHTML += page;
+
+  });
+
 
 })
 
