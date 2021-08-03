@@ -44,9 +44,10 @@ aboutpage.getAboutPage()
 /** To DOM */
 console.log("new data",newData);
 
-const page = '';
+
 
 newData.map(item => {  
+  const page = '';
   return page += `
   <div class="px-20 w-full"><h1 class="text-5xl">${item.title}</h1></div>
   <div class="flex flex-col md:flex-row">
@@ -61,7 +62,7 @@ newData.map(item => {
   </div>`;
 })
 
-document.getElementById('about-page').innerHTML = page;
+document.getElementById('about-page').innerHTML = page + 'TESt text';
 
 })
 
