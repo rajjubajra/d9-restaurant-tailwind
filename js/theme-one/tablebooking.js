@@ -7,20 +7,6 @@ class TableBooking{
   }
 
 
-  getCsrfToken(){
-    
-    fetch('/d9-restaurant/session/token',
-    {
-      method:'GET', 
-      headers: {
-      Appcept: 'application/vnd.api+json'
-      }
-    })
-    .then(res => {
-      return console.log(res)}
-      )
-    
-  }
 
 
 
@@ -45,7 +31,7 @@ bookingForm.addEventListener('submit', function(e){
     method: 'POST',
     headers:{
       'Content-Type':'application/vnd.api+json',
-      'X-CSRF-Token': csrfToken
+      'X-CSRF-Token': `/d9-restaurant/session/token`
     },
     body: formData
   }).then(res => {    
