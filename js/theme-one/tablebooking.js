@@ -4,9 +4,7 @@ class TableBooking{
     
     this.url = `/d9-restaurant/jsonapi/webform_submission/table_booking`;
     this.token_url = `/d9-restaurant/session/token`;
-
   }
-
 
   async getSessionToken(){
     const response_data = await fetch(`${this.token_url}`,{
