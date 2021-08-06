@@ -2,13 +2,5 @@
 
 /**
  * @file
- * Functions to support theming in the Tailwind CSS theme.
+ * hook_form_alter()
  */
-
-function tailwindcss_page_attachments_alter(&$page){
-  $path = $current_path = \Drupal::service('path.current')->getPath();
-  if($path == '/node') {
-    $page['#attached']['library'][] = 'tailwindcss/homepage-library';
-  }
-}
-
