@@ -52,14 +52,6 @@
     {{ page.header }}
   </header>
 
-  
-
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -68,19 +60,8 @@
       <div class="md:flex-1 p-4">
         {{ page.content }}
       </div>{# /.layout-content #}
-
-      {% if page.sidebar_first %}
-        <aside class="md:w-1/4 p-4" role="complementary">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        <aside class="md:w-1/4" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
     </div>
+
   </main>
 
   {% if page.footer %}
