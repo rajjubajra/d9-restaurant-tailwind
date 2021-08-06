@@ -14,7 +14,7 @@ class TableBooking{
       withCredentials: true // required to send auth cookie
     })
     const response = await response_data;
-    return  console.log("SESSION TOKEN",response);
+    return  console.log("SESSION TOKEN",response.ok);
   }
 
 }
