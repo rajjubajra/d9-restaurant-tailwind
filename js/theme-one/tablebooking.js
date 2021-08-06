@@ -30,8 +30,7 @@ bookingForm.addEventListener('submit', function(e){
   fetch(`/d9-restaurant/jsonapi/webform_submission/table_booking`,{
     method: 'POST',
     headers:{
-      'Content-Type':'application/vnd.api+json',
-      'X-CSRF-Token': `/d9-restaurant/session/token`
+      Accept: 'application/vnd.api+json'
     },
     body: formData
   }).then(res => {    
