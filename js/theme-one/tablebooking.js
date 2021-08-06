@@ -10,10 +10,10 @@ class TableBooking{
   getCsrfToken(){
     this.crfurl = '/d9-restaurant/session/token';
     this.token = fetch(this.crfurl,{method:'GET'})
-                  .then(res=>{
-                  return  console.log(res);
-                  })
+                  .then(res=>{res})
+    return this.token;
   }
+
 
 
 
