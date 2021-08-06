@@ -31,7 +31,7 @@ class TableBooking{
 
 const tablebooking = new TableBooking;
 
-console.log(tablebooking.getCsrfToken);
+console.log(tablebooking.getCsrfToken());
 
 
 const bookingForm = document.getElementById("booking-form");
