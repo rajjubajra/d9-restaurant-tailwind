@@ -8,10 +8,18 @@ class TableBooking{
 
 
   getCsrfToken(){
-    this.crfurl = '/d9-restaurant/session/token';
-    this.token = fetch(this.crfurl,{method:'GET'})
-                  .then(res=>{res})
-    return this.token;
+    
+    fetch('/d9-restaurant/session/token',
+    {
+      method:'GET', 
+      headers: {
+      Appcept: 'application/vnd.api+json'
+      }
+    })
+    .then(res => {
+      return console.log(res)}
+      )
+    
   }
 
 
