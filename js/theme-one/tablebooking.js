@@ -24,7 +24,7 @@ bookingForm.addEventListener('submit', function(e){
     body: formData
   }).then(res => {
     
-    console.log("DATA FORM DATA",res);
+    console.log("DATA FORM DATA",res.text);
   })
 
 })
