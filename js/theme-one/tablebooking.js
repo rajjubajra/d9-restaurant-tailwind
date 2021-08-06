@@ -7,9 +7,23 @@ class TableBooking{
   }
 
 
+  getCsrfToken(){
+    this.crfurl = '/d9-restaurant/session/token';
+    this.token = fetch(this.crfurl,{method:'GET'})
+                  .then(res=>{
+                  return  console.log(res);
+                  })
+  }
+
+
 
 
 }
+
+
+const tablebooking = new TableBooking;
+
+console.log(tablebooking.getCsrfToken);
 
 
 const bookingForm = document.getElementById("booking-form");
@@ -22,7 +36,8 @@ bookingForm.addEventListener('submit', function(e){
   fetch(`/d9-restaurant/jsonapi/webform_submission/table_booking`,{
     method: 'POST',
     headers:{
-      'Content-Type':'application/vnd.api+json'
+      'Content-Type':'application/vnd.api+json',
+      'X-CSRF-Token': csrfToken
     },
     body: formData
   }).then(res => {    
