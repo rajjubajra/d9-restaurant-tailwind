@@ -39,5 +39,6 @@ bookingForm.addEventListener('submit', function(e){
   }).then(res => {    
     console.log("DATA FORM DATA",res.json);
   })
+  .then(err=>console.log("Error Message",err))
 
 })
