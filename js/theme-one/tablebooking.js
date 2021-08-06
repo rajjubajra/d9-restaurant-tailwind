@@ -32,7 +32,8 @@ bookingForm.addEventListener('submit', function(e){
     method: 'POST',
     headers:{
       Accept: 'application/vnd.api+json',
-      'X-CSRF-Token': `/d9-restaurant/session/token`
+      'Content-Type':'application/vnd.api+json',
+      'X-CSRF-Token': tablebooking.getSessionToken()
     },
     body: formData
   }).then(res => {    
