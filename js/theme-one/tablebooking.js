@@ -7,12 +7,12 @@ class TableBooking{
   }
 
   async getSessionToken(){
-    const response_data = await fetch(`${this.token_url}`,{
+    await fetch(`${this.token_url}`,{
       method: 'GET',
       withCredentials: true // required to send auth cookie
     })
-    const response = await response_data;
-    return  console.log("SESSION TOKEN",response.ok);
+    .then(res => res.json())
+    .then(json => console.log(json))
   }
 
 }
@@ -35,9 +35,9 @@ bookingForm.addEventListener('submit', function(e){
       'Content-Type':'application/vnd.api+json',
       'X-CSRF-Token': tablebooking.getSessionToken()
     },
-    body: formData
+    body: JSON.stringify(formData)
   }).then(res => {    
-    console.log("DATA FORM DATA",res.text);
+    console.log("DATA FORM DATA",res.json);
   })
   .then(err=>console.log("Error Message",err))
 
