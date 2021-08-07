@@ -6,28 +6,18 @@ class TableBooking{
   }
 
 
-  getCsrfToken(callback) {
-    fetch(this.token_url)
-    .then(function (data) {
-    var csrfToken = data;
-    callback(csrfToken);
-    })
-  }
-
-
 
 }
 
 
 const tablebooking = new TableBooking;
-console.log("GET Session token",tablebooking.getCsrfToken());
+//console.log("GET Session token",tablebooking.getCsrfToken());
 
 const bookingForm = document.getElementById("booking-form");
 
 bookingForm.addEventListener('submit', function(e){
   e.preventDefault();
 
-  const formData = new FormData(this);
   
   fetch(`/d9-restaurant/webform_rest/submit`,{
     method: 'POST',
