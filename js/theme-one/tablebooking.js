@@ -6,24 +6,13 @@ class TableBooking{
   }
 
 
-  async getSessionToken(){
-    
-    await fetch(`${this.token_url}`,{
-      method: 'GET',
-      withCredentials: true // required to send auth cookie
+  getCsrfToken(callback) {
+    fetch(this.token_url)
+    .done(function (data) {
+    var csrfToken = data;
+    callback(csrfToken);
     })
-    .then((response) => {
-      const csrf_token = response.data;
-      fetch({
-        withCredentials: true, // include auth cookie
-        headers: {
-          'X-CSRF-Token': csrf_token,
-        },
-      })
-    })
-
   }
-
 
 
 
@@ -31,7 +20,7 @@ class TableBooking{
 
 
 const tablebooking = new TableBooking;
-console.log("GET Session token",tablebooking.getSessionToken());
+console.log("GET Session token",tablebooking.getCsrfToken());
 
 const bookingForm = document.getElementById("booking-form");
 
