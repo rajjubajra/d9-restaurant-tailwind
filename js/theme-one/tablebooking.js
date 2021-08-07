@@ -45,8 +45,8 @@ bookingForm.addEventListener('submit', handlesubmit)
 async function handlesubmit(e){
   e.preventDefault();
   var node = {
-    "name": "Rajju D Bajra",
-    "message": "This is test message from... axios"
+    "name": [{"value": "Rajju D Bajra"}],
+    "message": [{"value":"This is test message from... axios"}]
   };
 
   try{
