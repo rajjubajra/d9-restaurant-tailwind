@@ -40,7 +40,7 @@ const tablebooking = new TableBooking;
 //console.log("GET Session token",tablebooking.getCsrfToken());
 
 const bookingForm = document.getElementById("booking-form");
-
+bookingForm.addEventListener('submit', handlesubmit)
 
 async function handlesubmit(e){
   e.preventDefault();
@@ -51,7 +51,7 @@ async function handlesubmit(e){
 
   try{
     //const axios = await this.getCsrfToken() // wait for an initialized axios object
-    const response = await axios.post( this.url, node) // wait for the POST AJAX request to complete
+    const response = await axios.post( '/d9-restaurant/session/token', node) // wait for the POST AJAX request to complete
     console.log('Node created: ', response)
   }catch(e){
     console.log("Error",e)
@@ -59,4 +59,3 @@ async function handlesubmit(e){
 
 }
 
-bookingForm.addEventListener('submit', tablebooking.handlesubmit)
