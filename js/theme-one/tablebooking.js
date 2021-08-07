@@ -35,17 +35,8 @@ class TableBooking{
   async handlesubmit(e){
     e.preventDefault();
     var node = {
-      type: [{
-        target_id: 'table-booking',
-        target_type: 'node_type',
-      }],
-      name: [{
-        value: "Rajju D Bajra",
-      }],
-      message: [{
-        value: "This is test message from... axios",
-        format: 'plain_text',
-      }],
+      name: "Rajju D Bajra",
+      message: "This is test message from... axios"
     };
 
     try{
