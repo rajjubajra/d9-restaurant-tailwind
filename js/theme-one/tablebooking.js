@@ -14,7 +14,7 @@ class TableBooking{
     })
     .then((response)=>{
       const csrf_token = response.data;
-      this.ajax = axios.create({
+      this.ajax = fetch.create({
         baseURL,
         withCredentials: true, // include auth cookie
         headers: {
