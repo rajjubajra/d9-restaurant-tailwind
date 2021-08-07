@@ -14,7 +14,7 @@ class TableBooking{
     })
     .then((response) => {
       const csrf_token = response.data;
-      this.ajax = fetch.create({
+      fetch({
         withCredentials: true, // include auth cookie
         headers: {
           'X-CSRF-Token': csrf_token,
