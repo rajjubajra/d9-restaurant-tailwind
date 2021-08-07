@@ -60,7 +60,7 @@ async function handlesubmit(e){
 
   try{
     //const axios = await tablebooking.getCsrfToken() // wait for an initialized axios object
-    const response = await axios.post( '/d9-restaurant/jsonapi/webform_submission/table_booking', node) // wait for the POST AJAX request to complete
+    const response = await axios.post( '/d9-restaurant/jsonapi/webform/webform', node) // wait for the POST AJAX request to complete
     console.log('Node created: ', response)
   }catch(e){
     console.log("Error",e)
