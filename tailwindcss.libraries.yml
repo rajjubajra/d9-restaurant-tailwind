@@ -5,6 +5,7 @@ global-styling:
   
   js:
     js/theme-one/mainmenu.js: {}
+    dist/axios.min.js: {}
 
 homepage-script:
   js:
