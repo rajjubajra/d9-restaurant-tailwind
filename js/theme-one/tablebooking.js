@@ -11,8 +11,8 @@ class TableBooking{
       method: 'GET',
       withCredentials: true // required to send auth cookie
     })
-    .then(res => res.json())
-    .then(json => console.log(json))
+    .then(res => res.text)
+    .then(text => console.log(text))
   }
 
 }
