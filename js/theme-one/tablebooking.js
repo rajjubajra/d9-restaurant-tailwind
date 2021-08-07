@@ -32,7 +32,9 @@ class TableBooking{
 
 
   async handlesubmit(e){
-    e.preventDefault();
+
+    e.preventDefault()
+    
     var node = {
       type: [{
         target_id: 'table-booking',
