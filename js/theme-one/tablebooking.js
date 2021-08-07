@@ -12,7 +12,7 @@ class TableBooking{
       withCredentials: true // required to send auth cookie
     })
     .then(res => res.text)
-    .then(text => console.log(text))
+    .then(text => text)
   }
 
 }
