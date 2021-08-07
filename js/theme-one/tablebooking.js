@@ -73,4 +73,4 @@ const tablebooking = new TableBooking;
 
 const bookingForm = document.getElementById("booking-form");
 
-bookingForm.addEventListener('submit', tablebooking.handlesubmit())
+bookingForm.addEventListener('submit', tablebooking.handlesubmit(e))
