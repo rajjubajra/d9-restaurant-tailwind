@@ -4,9 +4,7 @@ class TableBooking{
     this.url = `/d9-restaurant/jsonapi/webform_submission/table_booking`;
     this.token_url = `/d9-restaurant/session/token`;
 
-    this.singleton = null  // a singleton instance of axios that the default init function returns
-
-    
+    this.singleton = null  // a singleton instance of axios that the default init function returns    
   }
 
   // note the 'async' keyword, it allows us to call 'await' later
@@ -35,9 +33,7 @@ class TableBooking{
 
 
   async handlesubmit(e){
-
-    e.preventDefault()
-    
+    e.preventDefault();
     var node = {
       type: [{
         target_id: 'table-booking',
@@ -56,13 +52,10 @@ class TableBooking{
       //const axios = await this.getCsrfToken() // wait for an initialized axios object
       const response = await axios.post( this.url, node) // wait for the POST AJAX request to complete
       console.log('Node created: ', response)
-      emitter.emit('NODE_UPDATED')
     }catch(e){
       console.log("Error",e)
     }
-    const handleChange = (e, propName) => {
-      data[propName] = e.target.value
-    }
+
   }
 
 
