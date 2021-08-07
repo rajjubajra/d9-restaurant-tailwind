@@ -5,6 +5,8 @@ class TableBooking{
     this.token_url = `/d9-restaurant/session/token`;
 
     this.singleton = null  // a singleton instance of axios that the default init function returns
+
+    console.log("singlton?",this.singleton);
   }
 
   // note the 'async' keyword, it allows us to call 'await' later
@@ -27,7 +29,7 @@ class TableBooking{
       console.error(error)
     }
   }
-    return singleton
+    return this.singleton
   }
 
 
