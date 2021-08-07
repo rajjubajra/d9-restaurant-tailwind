@@ -8,7 +8,7 @@ class TableBooking{
 
   getCsrfToken(callback) {
     fetch(this.token_url)
-    .done(function (data) {
+    .then(function (data) {
     var csrfToken = data;
     callback(csrfToken);
     })
@@ -29,14 +29,19 @@ bookingForm.addEventListener('submit', function(e){
 
   const formData = new FormData(this);
   
-  fetch(`/d9-restaurant/jsonapi/webform_submission/table_booking`,{
+  fetch(`/d9-restaurant/webform_rest/submit`,{
     method: 'POST',
     headers:{
       Accept: 'application/vnd.api+json',
       'Content-Type':'application/vnd.api+json',
-      'X-CSRF-Token': tablebooking.getSessionToken()
     },
-    body: JSON.stringify(formData)
+    body: {
+      "webform_id": "table_booking",
+      "name": "Rajju",
+      "email": "myemail@mydomain.com.au",
+      "message": "This webform rest post message..."
+    }
+    
   }).then(res => {    
     console.log("DATA FORM DATA",res.json);
   })
