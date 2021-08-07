@@ -50,7 +50,7 @@ class TableBooking{
     };
 
     try{
-      const axios = await getCsrfToken() // wait for an initialized axios object
+      const axios = await this.getCsrfToken() // wait for an initialized axios object
       const response = await axios.post( this.url, node) // wait for the POST AJAX request to complete
       console.log('Node created: ', response)
       emitter.emit('NODE_UPDATED')
