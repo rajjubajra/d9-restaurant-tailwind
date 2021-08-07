@@ -19,11 +19,10 @@ bookingForm.addEventListener('submit', function(e){
   e.preventDefault();
 
   
-  fetch(`/d9-restaurant/webform_rest/submit`,{
+  fetch(`/d9-restaurant/webform_rest/submit?_format=json`,{
     method: 'POST',
     headers:{
-      Accept: 'application/vnd.api+json',
-      'Content-Type':'application/vnd.api+json',
+      'Content-Type':'application/json',
     },
     body: {
       "webform_id": "table_booking",
@@ -31,7 +30,6 @@ bookingForm.addEventListener('submit', function(e){
       "email": "myemail@mydomain.com.au",
       "message": "This webform rest post message..."
     }
-    
   }).then(res => {    
     console.log("DATA FORM DATA",res.json);
   })
