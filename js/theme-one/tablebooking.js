@@ -45,12 +45,12 @@ bookingForm.addEventListener('submit', handlesubmit)
 async function handlesubmit(e){
   e.preventDefault();
   var node = {
-    name: "Rajju D Bajra",
-    message: "This is test message from... axios"
+    "name": "Rajju D Bajra",
+    "message": "This is test message from... axios"
   };
 
   try{
-    const axios = await tablebooking.getCsrfToken() // wait for an initialized axios object
+    //const axios = await tablebooking.getCsrfToken() // wait for an initialized axios object
     const response = await axios.post( '/d9-restaurant/session/token', node) // wait for the POST AJAX request to complete
     console.log('Node created: ', response)
   }catch(e){
