@@ -4,9 +4,9 @@ global-styling:
       dist/tailwind.css: {}
   
   js:
-    js/theme-one/mainmenu.js: {}
     dist/axios.min.js: {}
-
+    js/theme-one/mainmenu.js: {}
+    
 homepage-script:
   js:
     js/theme-one/homepage.js: {}
