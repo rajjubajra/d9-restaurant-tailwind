@@ -31,7 +31,7 @@ class TableBooking{
   }
 
 
-  async handlesubmit(){
+  async handlesubmit(e){
     e.preventDefault();
     var node = {
       type: [{
