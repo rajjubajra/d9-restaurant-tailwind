@@ -12,19 +12,14 @@ class TableBooking{
       method: 'GET',
       withCredentials: true // required to send auth cookie
     })
-    .then((response)=>{
+    .then((response) => {
       const csrf_token = response.data;
       this.ajax = fetch.create({
-        baseURL,
         withCredentials: true, // include auth cookie
         headers: {
           'X-CSRF-Token': csrf_token,
         },
-    })
-     // set baseURL as property on 'this'
-    this.baseURL = baseURL;
-     // fetch the default page data
-    this.fetchData();
+      })
     })
 
   }
