@@ -32,25 +32,6 @@ class TableBooking{
   }
 
 
-  async handlesubmit(e){
-    e.preventDefault();
-    var node = {
-      name: "Rajju D Bajra",
-      message: "This is test message from... axios"
-    };
-
-    try{
-      //const axios = await this.getCsrfToken() // wait for an initialized axios object
-      const response = await axios.post( this.url, node) // wait for the POST AJAX request to complete
-      console.log('Node created: ', response)
-    }catch(e){
-      console.log("Error",e)
-    }
-
-  }
-
-
-
 
 }
 
@@ -59,5 +40,23 @@ const tablebooking = new TableBooking;
 //console.log("GET Session token",tablebooking.getCsrfToken());
 
 const bookingForm = document.getElementById("booking-form");
+
+
+async function handlesubmit(e){
+  e.preventDefault();
+  var node = {
+    name: "Rajju D Bajra",
+    message: "This is test message from... axios"
+  };
+
+  try{
+    //const axios = await this.getCsrfToken() // wait for an initialized axios object
+    const response = await axios.post( this.url, node) // wait for the POST AJAX request to complete
+    console.log('Node created: ', response)
+  }catch(e){
+    console.log("Error",e)
+  }
+
+}
 
 bookingForm.addEventListener('submit', tablebooking.handlesubmit)
