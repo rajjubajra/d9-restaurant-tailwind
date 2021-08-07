@@ -6,11 +6,12 @@ class TableBooking{
 
     this.singleton = null  // a singleton instance of axios that the default init function returns
 
-    console.log("singlton?",this.singleton);
+    
   }
 
   // note the 'async' keyword, it allows us to call 'await' later
   async getCsrfToken(){
+
   if(!this.singleton) {
     const tokenURL = this.token_url;
     try {
@@ -52,7 +53,7 @@ class TableBooking{
     };
 
     try{
-      const axios = await this.getCsrfToken() // wait for an initialized axios object
+      //const axios = await this.getCsrfToken() // wait for an initialized axios object
       const response = await axios.post( this.url, node) // wait for the POST AJAX request to complete
       console.log('Node created: ', response)
       emitter.emit('NODE_UPDATED')
