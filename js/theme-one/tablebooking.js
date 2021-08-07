@@ -45,8 +45,18 @@ bookingForm.addEventListener('submit', handlesubmit)
 async function handlesubmit(e){
   e.preventDefault();
   var node = {
-    "name": [{"value":"Rajju D Bajra"}]
-  };
+    "data": {
+      "type": "webform--webform",
+      "id": "fdfb91b8-ddea-4053-b931-b43f994121ee",
+      "attributes": {
+        "title": "Table Booking",
+        "element": {
+          "name":[{"value": "Rajju"}],
+          "email": [{"value": "rajju@emil.com"}]
+        }
+      }
+    }
+  }
 
   try{
     //const axios = await tablebooking.getCsrfToken() // wait for an initialized axios object
