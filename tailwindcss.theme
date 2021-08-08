@@ -4,24 +4,3 @@
  * @file
  * hook_form_alter()
  */
-function tailwindcss_preprocess_webform_form(&$vars) {
-  
-
-  $vars['form']['submitted']['name']['#prefix'] = '
-  <table border="0">
-  <tbody style="border: 0px;">
-    <tr>
-     <td>';
-  $vars['form']['submitted']['name']['#suffix'] = '</td>';
-  $vars['form']['submitted']['phone']['#prefix'] = '<td>';
-  '</td>';
-  $vars['form']['submitted']['email']['#prefix'] = '<td>';
- '</td></tr></tbody></table>';
-
-  if (isset($vars['form']['details']['nid']['#value'])) {
-    $vars['nid'] = $vars['form']['details']['nid']['#value'];
-  }
-  elseif (isset($vars['form']['submission']['#value'])) {
-    $vars['nid'] = $vars['form']['submission']['#value']->nid;
-  }
-}
