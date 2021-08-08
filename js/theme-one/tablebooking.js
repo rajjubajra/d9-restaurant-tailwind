@@ -18,7 +18,7 @@ class TableBooking{
       })
       const csrf_token = response.data
       singleton = axios.create({
-        baseURL: config.drupal_url, // every request is relative to this URL
+        baseURL: `rdbajra.com/d9-restaurant`, // every request is relative to this URL
         withCredentials: true, // include auth cookie in every request
         headers: { 'X-CSRF-Token': csrf_token }, // include this header in every request
         params: { _format: 'json' }, // add these query params to every request
