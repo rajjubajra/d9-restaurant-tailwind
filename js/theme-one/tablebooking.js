@@ -18,7 +18,7 @@ class TableBooking{
       })
       const csrf_token = response.data
       this.singleton = axios.create({
-        baseURL: `/d9-restaurant`, // every request is relative to this URL
+        baseURL: ``, // every request is relative to this URL
         withCredentials: true, // include auth cookie in every request
         headers: { 'X-CSRF-Token': csrf_token }, // include this header in every request
         params: { _format: 'json' }, // add these query params to every request
