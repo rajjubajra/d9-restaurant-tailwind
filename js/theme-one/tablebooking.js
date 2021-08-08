@@ -23,7 +23,7 @@ class TableBooking{
         headers: { 'X-CSRF-Token': csrf_token }, // include this header in every request
         params: { _format: 'json' }, // add these query params to every request
       })
-      console.log('Created new axios instance', singleton)
+      console.log('Created new axios instance', this.singleton)
     } catch(error) {
       console.error(error)
     }
